@@ -14,7 +14,10 @@ admin.initializeApp({
 });
 
 // Twilio Setup
-const twilioClient = twilio('AC918512eaf7657cfab77b04fbb1a57b9e', 'da9876d647bc0de38a3826aaa3a8c79d');
+const twilioClient = twilio(
+  process.env.TWILIO_ACCOUNT_SID,
+  process.env.TWILIO_AUTH_TOKEN
+);
 const twilioNumber = '+0018782830964'; // Your Twilio number
 
 const otpStore = {}; // Use Redis or DB in production
