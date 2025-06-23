@@ -16,7 +16,11 @@ const serviceAccount = {
 
 console.log('Firebase Service Account:', serviceAccount);
 console.log('Type of project_id:', typeof serviceAccount.project_id);
-
+console.log('serviceAccount keys:', Object.keys(serviceAccount));
+console.log('project_id typeof:', typeof serviceAccount.project_id);
+console.log('project_id value:', serviceAccount.project_id);
+console.log('isPlainObject:', Object.getPrototypeOf(serviceAccount) === Object.prototype);
+console.log('serviceAccount JSON:', JSON.stringify(serviceAccount));
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
