@@ -12,5 +12,6 @@ const serviceAccount = {
   client_x509_cert_url: process.env.GOOGLE_CLIENT_X509_CERT_URL,
   universe_domain: process.env.GOOGLE_UNIVERSE_DOMAIN,
 };
-
+console.log('TWILIO_ACCOUNT_SID:', process.env.TWILIO_ACCOUNT_SID);
+console.log('TWILIO_AUTH_TOKEN:', process.env.TWILIO_AUTH_TOKEN);
 module.exports = serviceAccount;
