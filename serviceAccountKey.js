@@ -2,7 +2,7 @@ const admin = require('firebase-admin');
 
 const serviceAccount = {
   type: process.env.GOOGLE_TYPE,
-  project_id: process.env.GOOGLE_PROJECT_ID,
+  project_id: 'aborgiba', // مباشرة نص ثابت للتجربة
   private_key_id: process.env.GOOGLE_PRIVATE_KEY_ID,
   private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'), // must replace literal "\n"
   client_email: process.env.GOOGLE_CLIENT_EMAIL,
