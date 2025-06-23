@@ -1,8 +1,11 @@
 require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 const admin = require('firebase-admin');
 const twilio = require('twilio');
+const serviceAccount = require('./serviceAccountKey');
+
 
 
 const app = express();
@@ -10,7 +13,6 @@ app.use(cors());
 app.use(express.json());
 
 // Firebase Admin Setup
-const serviceAccount = require('./serviceAccountKey');
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
