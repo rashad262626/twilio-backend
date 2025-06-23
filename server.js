@@ -22,7 +22,7 @@ const twilioClient = twilio(
   process.env.TWILIO_ACCOUNT_SID,
   process.env.TWILIO_AUTH_TOKEN
 );
-const twilioNumber = '+0018782830964'; // Your Twilio number
+const twilioNumber = '+18782830964'; // Your Twilio number
 
 const otpStore = {}; // Use Redis or DB in production
 
