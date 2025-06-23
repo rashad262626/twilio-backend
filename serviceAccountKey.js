@@ -1,4 +1,4 @@
-require('dotenv').config();
+
 
 // Firebase Admin Setup
 const admin = require('firebase-admin');
