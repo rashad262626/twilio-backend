@@ -21,6 +21,9 @@ console.log('project_id typeof:', typeof serviceAccount.project_id);
 console.log('project_id value:', serviceAccount.project_id);
 console.log('isPlainObject:', Object.getPrototypeOf(serviceAccount) === Object.prototype);
 console.log('serviceAccount JSON:', JSON.stringify(serviceAccount));
+onst plainServiceAccount = toPlainObject(serviceAccount);
+
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
